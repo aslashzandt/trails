@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+    id="editarticle-window"
+    title="Add Page"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<script src="copyMenu.js" />
+<script src="addPage.js" />
+
+<toolbox flex="1">
+ 
+<hbox>
+ <vbox>
+ 	<hbox style="min-height:15px;" />
+ 	<hbox>
+		<button label="One Column" oncommand="writeNewPageAfter(1)" /><img src="chrome://trails/content/images/oneSpread.png" />
+		<button label="Two Columns" oncommand="writeNewPageAfter(2)" /><img src="chrome://trails/content/images/twoSpreads.png" />
+		<button label="Three Columns" oncommand="writeNewPageAfter(3)" /><img src="chrome://trails/content/images/threeSpreads.png" />
+		<button label="Cancel" oncommand="cancelElement()" />
+	
+	<separator class="thin" style="min-width:30px;" orient="vertical"/>
+
+    
+	</hbox>
+ </vbox>
+  
+</hbox>
+
+</toolbox>
+ 
+</window>
+

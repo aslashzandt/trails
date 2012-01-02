@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+    id="addimage-window"
+    title="Add Image"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<script src="copyMenu.js" />
+<script src="addImage.js" />
+
+<toolbox flex="1">
+
+<hbox style="background-color: #FFFFFF">
+    <image id="image" src="about:mozilla" style="max-width: 600px; max-height: 300px; " />
+	
+</hbox>
+ 
+ <spacer flex="1" style="background-color: #FFFFFF" />
+  	
+<hbox>
+  <vbox>
+  
+	<hbox>
+ 	 <label value="(Image might be scaled incorrectly in order to fit window.)" style="font-size: 9px; min-height:12px;" />
+ 	</hbox>
+	
+ 	<hbox>
+	
+	
+		<button label="Save" oncommand="trails_addimage.saveImageDialog()" />
+		<button label="Cancel" oncommand="trails_addimage.cancelImage()" />
+
+		<separator class="thin" style="min-width:30px;" orient="vertical"/>
+		
+ 		<vbox>
+		<hbox style="min-height:5px;" />
+		<hbox>
+			
+			<vbox>
+			<hbox style="min-height:5px;" />
+			<hbox>
+			<label value="Spread" style="text-align: left;" />
+			</hbox>
+			</vbox>
+			
+			<menulist id="pagesList">  
+			<menupopup>
+			</menupopup>
+ 			</menulist> 
+		</hbox>
+		</vbox>
+		
+	</hbox>
+ </vbox>
+		<separator class="thin" style="min-width:50px;" orient="vertical"/>
+		
+			<radiogroup id="editRadio">
+			<radio id="reference" label="Reference" selected="true"/>
+			<radio id="separator" label="Separator" />
+			</radiogroup>
+	
+</hbox>		
+ 
+</toolbox>
+ 
+<script>
+ trails_addimage.Init();
+</script>
+ 
+</window>
+

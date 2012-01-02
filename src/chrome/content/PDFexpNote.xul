@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+    id="PDF-exp-note"
+    title="Publish to PDF"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<script src="copyMenu.js" />
+
+<toolbox flex="1">
+
+<vbox>
+
+	<hbox>
+		<label value="important!" style="font-size:32px;" />
+	</hbox>
+
+	<separator class="thin" style="height:30px; width:100%;" orient="horizontal"/>
+
+	<vbox style="padding:12px;font-size:11px;">
+		<label value="In case your exported PDF would look malformed," style="margin:0px;padding:0px;" />
+		<label value="please have a look in the documentation " style="margin:0px;padding:0px;" />
+		<label value="here" style="color:blue;text-decoration:underline;margin:0px;padding:0px;" onclick="OpenPDFexpHelp();" />.
+	</vbox>
+
+	<hbox style="padding-left:58px;padding-top:54px;">
+		<button id="CancelButton" label="Cancel" oncommand="window.close();" />
+		<button id="PublishButton" label="Continue" oncommand="window.close();exportToPDF();" />
+	</hbox>
+</vbox>		
+
+
+</toolbox>
+
+</window>
+
+
+
+

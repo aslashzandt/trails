@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+    id="addarticle-window"
+    title="Add Article"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<script src="copyMenu.js" />
+<script src="addArticle.js" />
+<toolbox flex="1">
+
+<hbox style="min-height: 300px;" flex="1">
+    <textbox id="article" multiline="true" value="" wrap="on" flex="1"/>
+</hbox>
+ 
+<hbox>
+ <vbox>
+ 	<hbox style="min-height:15px;" />
+ 	<hbox>
+		<button id="saveButton" label="Save" oncommand="trails_addarticle.saveArticle()" />
+		<button label="Cancel" oncommand="trails_addarticle.cancelArticle()" />
+	
+	<separator class="thin" style="min-width:30px;" orient="vertical"/>
+
+ 		<vbox>
+		<hbox style="min-height:5px;" />
+		<hbox>
+			<vbox>
+			<hbox style="min-height:5px;" />
+			<hbox>
+			<label value="Spread" style="text-align: left;" />
+			</hbox>
+			</vbox>
+			
+			<menulist id="pagesList">  
+			<menupopup>
+			</menupopup>
+ 			</menulist> 
+		</hbox>
+		</vbox>
+	
+     
+	</hbox>
+ </vbox>
+	
+	<separator class="thin" style="min-width:50px;" orient="vertical"/>
+	
+	<radiogroup id="editRadio">
+	<radio id="reference" label="Reference" selected="true"/>
+	<radio id="separator" label="Separator" />
+	</radiogroup>
+
+	<separator class="thin" style="min-width:20px;" orient="vertical"/>
+
+	<radiogroup id="fontStyle">
+	<radio id="light" label="Text Light" selected="true"/>
+	<radio id="bold" label="Text Bold" />
+	</radiogroup>
+  
+</hbox>
+ 
+</toolbox>
+ 
+<script>
+ trails_addarticle.Init();
+</script>
+
+</window>
+
+
+
+

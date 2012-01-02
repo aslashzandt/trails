@@ -1,0 +1,244 @@
+html {
+	font-size: 10pt;
+}
+
+.A4Landscape {
+	position: relative;
+	margin: 0em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	height: 190mm;
+	width: 264mm;
+}
+
+.pageTitle {
+	cursor: pointer;
+}
+
+.articleList {
+	padding: 0em;
+	margin: 0em;
+	list-style-type: none;
+}
+
+.articleList li {
+	position: relative;
+	cursor: pointer;
+	padding: 0em;
+	margin: 0em;
+}
+
+.edit {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+}
+
+.removeArticle {
+	right: 0px;
+	top: 0px;
+}
+
+.removePage {
+	right: 0px;
+	top: 0px;
+}
+
+.layout1 {
+	height: 49.04em;
+   -moz-column-gap:4.82em;
+   -moz-column-count:2;
+} 
+
+.layout2 {
+	height: 49.04em;
+   -moz-column-gap:2.04em;
+   -moz-column-count:4;
+} 
+
+.layout3 {
+	height: 48.19em;
+   -moz-column-gap:1.84em;
+   -moz-column-count:6;
+} 
+
+.title1 {
+}
+
+.title2 {
+}
+
+.title3 {
+}
+
+.sidbrytning {
+	page-break-after: always;
+	font-size: 0.2em;
+}
+
+.reference {
+font-family: "Times New Roman", Times, serif;
+font-size: .7em;
+word-wrap: break-word;
+}
+
+p.light1 {
+font-family: "Times New Roman", Times, serif;
+font-size: 1em;
+line-height: 1.27em;
+}
+
+p.bold1 {
+font-family: Helvetica, Arial, sans-serif;
+font-size: .98em;
+line-height: 1.3em;
+font-weight: bold;
+}
+
+p.light2 {
+font-family: "Times New Roman", Times, serif;
+font-size: .85em;
+line-height: 1.16em;
+}
+
+p.bold2 {
+font-family: Helvetica, Arial, sans-serif;
+font-size: .81em;
+line-height: 1.22em;
+font-weight: bold;
+}
+
+p.light3 {
+font-family: "Times New Roman", Times, serif;
+font-size: .73em;
+line-height: 1.16em;
+}
+
+p.bold3 {
+font-family: Helvetica, Arial, sans-serif;
+font-size: .7em;
+line-height: 1.21em;
+font-weight: bold;
+}
+
+h2.lay1 {
+font-family: Helvetica, Arial, sans-serif;
+font-size: .9em;
+line-height: 1.41em;
+font-weight: bold;
+}
+
+h2.lay2 {
+font-family: Helvetica, Arial, sans-serif;
+font-size: .77em;
+line-height: 1.29em;
+font-weight: bold;
+}
+
+h2.lay3 {
+font-family: Helvetica, Arial, sans-serif;
+font-size: .65em;
+line-height: 1.31em;
+font-weight: bold;
+}
+
+hr.hr1 {
+      height: 0px;
+      border-color: black;
+      border-style: solid;
+      border-right-width: 0px;
+      border-left-width: 0px;
+      border-bottom-width: 0px;
+      border-top-width: 0.2em;
+      width: 100%;
+}
+
+
+table {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+td {
+	width: 25%;
+}
+
+td.light11 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+
+td.light12 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .7em;
+	line-height: 1.43em;
+}
+td.light13 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+	padding-left: 2.4em;
+}
+td.light14 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .7em;
+	line-height: 1.43em;
+}
+
+td.light21 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+td.light22 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .7em;
+	line-height: 1.43em;
+}
+td.light23 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+	padding-left: 1em;
+}
+td.light24 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .7em;
+	line-height: 1.43em;
+}
+td.light31 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+td.light32 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .7em;
+	line-height: 1.43em;
+}
+td.light33 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+	padding-left: .9em;
+}
+td.light34 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .7em;
+	line-height: 1.43em;
+}
+
+/* here to fix FF2's fucked-upness regarding font rendering */
+
+td.light13.ff2 {
+	padding-left: 4.3em;
+}
+
+td.light23.ff2 {
+	padding-left: 1.9em;
+}
+
+td.light33.ff2 {
+	padding-left: 1.6em;
+}

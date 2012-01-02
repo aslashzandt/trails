@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+    id="editarticle-window"
+    title="Edit Article"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<script src="jquery.js" />
+<script src="copyMenu.js" />
+<script src="editArticle.js" />
+
+<toolbox flex="1">
+
+ <hbox style="min-height: 300px;" flex="1">
+    <textbox id="article" multiline="true" value="" wrap="on" flex="1"/>
+</hbox>
+ 
+<hbox>
+ <vbox>
+ 	<hbox style="min-height:15px;" />
+ 	<hbox>
+		<button label="Save" oncommand="trails_editarticle.saveEditedArticle()" />
+		<button label="Cancel" oncommand="trails_editarticle.cancelArticle()" />
+	
+	<separator class="thin" style="min-width:30px;" orient="vertical"/>
+
+    
+	</hbox>
+ </vbox>
+	
+	<separator class="thin" style="min-width:50px;" orient="vertical"/>
+	
+	<radiogroup id="editRadio">
+	<radio id="reference" label="Reference" selected="true"/>
+	<radio id="separator" label="Separator" />
+	</radiogroup>
+
+	<separator class="thin" style="min-width:20px;" orient="vertical"/>
+
+	<radiogroup id="fontStyle">
+	<radio id="light" label="Text Light" selected="true"/>
+	<radio id="bold" label="Text Bold" />
+	</radiogroup>
+	
+	<spacer flex="1"/>
+	
+				<vbox>
+			<hbox style="min-height: 15px;" />
+			<hbox>
+			<button label="Remove" oncommand="trails_editarticle.removeArticle()" />
+			</hbox>
+			</vbox>
+		
+  
+</hbox>
+
+</toolbox>
+ 
+<script>
+ trails_editarticle.Init();
+</script>
+ 
+</window>
+

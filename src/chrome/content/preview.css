@@ -1,0 +1,135 @@
+body {
+	font-size: .34em;
+}
+
+.A4Landscape {
+	width: 89.8mm;
+	height: 64.6mm;
+	margin-bottom: 12px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-width: thin;
+	border-color: #000000;
+}
+
+.pageNumber {
+	font-weight: bold;
+	padding-left: 4px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-top: 4px;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	font-size: 2.5em;
+	color: #a4a4a4;
+	display: none;
+	position: absolute;
+	bottom: 50%;
+}
+
+.pageNumber.left {
+	left: 0px;
+}
+
+.pageNumber.right {
+	right: 0px;
+}
+
+.addPageArea {
+	left: 2px;
+	bottom: -17px;
+	position: absolute;
+	width: 95%;
+	height: 16px;
+}
+
+.addPage {
+	float: left;
+	position: relative;
+	background-repeat: no-repeat;
+	height: 16px;
+}
+
+.previewPage {
+	right: 0px;
+	bottom: 0px;
+}
+
+table {
+	margin-top: 1em;
+}
+
+.overflower {
+	overflow: hidden;
+}
+
+.layout1 .artImg {
+	width: 149px;
+}
+
+.layout2 .artImg {
+	width: 77px;
+
+}
+.layout3 .artImg {
+	width: 46px;
+}
+
+/* here to fix FF2's fucked-upness regarding font rendering */
+
+.ff2 {
+	margin-top: .3em;
+	margin-bottom: .5em;
+}
+
+p.light1.ff2 {
+font-size: 1.05em;
+line-height: 1.35em;
+}
+
+p.bold1.ff2 {
+font-size: 1.05em;
+line-height: 1.48em;
+font-weight: bold;
+}
+
+p.light2.ff2 {
+font-size: .9em;
+line-height: 1.2em;
+}
+
+p.bold2.ff2 {
+font-size: .81em;
+line-height: 1.22em;
+font-weight: bold;
+}
+
+p.light3.ff2 {
+font-size: .75em;
+line-height: 1.1em;
+}
+
+p.bold3.ff2 {
+font-size: .7em;
+line-height: 1.21em;
+font-weight: bold;
+}
+
+h2.lay1.ff2 {
+font-size: .9em;
+line-height: 1.41em;
+font-weight: bold;
+}
+
+h2.lay2.ff2 {
+font-size: .87em;
+line-height: 1.5em;
+font-weight: bold;
+}
+
+h2.lay3.ff2 {
+font-size: .65em;
+line-height: 1.31em;
+font-weight: bold;
+}

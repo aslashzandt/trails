@@ -1,0 +1,14 @@
+content	trails	chrome/content/
+locale	trails	en-US	chrome/locale/en-US/
+skin	trails	classic/1.0	chrome/trails/skin/
+overlay	chrome://browser/content/browser.xul	chrome://trails/content/firefoxOverlay.xul
+overlay chrome://browser/content/browser.xul chrome://trails/content/copyMenu.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/copyMenu.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/addPage.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/addArticle.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/addImage.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/chooseLayout.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/copyMenu.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/editArticle.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/editImage.xul
+overlay	chrome://browser/content/web-panels.xul	chrome://trails/content/spreads.xul

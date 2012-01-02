@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type"text/css" ?>
+<!DOCTYPE page SYSTEM "chrome://trails/locale/trails.dtd">
+
+<page id="sbEmptySidebar" title="&emptysidebar.title;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+	<script type="application/x-javascript" src="chrome://trails/content/copyMenu.js" />
+		
+	<toolbox id="toolbox" flex="1">
+	  <menubar id="menubar">
+	  	
+	  	<menu id="page-menu" label="BOOKLET" onclick="trails.populatePages()">
+			 <menupopup id="page-popup">
+			 
+	            <menuitem id="createbooklet-item" label="Create Booklet..." oncommand="trails.createBooklet()"></menuitem> 
+	            <menuitem id="openbooklet-item" label="Open Booklet..." oncommand="trails.openBooklet()"></menuitem>
+	           
+				
+				<menuseparator/>
+	
+				<menu id="new-spread" label="New Spread">
+					<menupopup id="new-spread-popup">
+					<menuitem label="One Column" class="menuitem-iconic" image="chrome://trails/content/images/oneSpread_hover.png" oncommand="trails.dbAddPage(1);" />
+					<menuitem label="Two Columns" class="menuitem-iconic" image="chrome://trails/content/images/twoSpreads_hover.png" oncommand="trails.dbAddPage(2);" />
+					<menuitem label="Three Columns" class="menuitem-iconic" image="chrome://trails/content/images/threeSpreads_hover.png" oncommand="trails.dbAddPage(3);" />
+					</menupopup>
+				</menu>
+			
+				<menu id="page-spread-remove" label="Remove Spread">
+					<menupopup id="spread-remove" >
+						<menuitem label="Click in Menu to Update" />
+					</menupopup>
+				</menu>
+				
+				<menuseparator/>
+				
+				
+				<menu id="set-page-title" label="Set Page Title">
+					<menupopup id="page-title" >
+						<menuitem label="Click in Menu to Update" />
+					</menupopup>
+				</menu>
+				
+				<menu id="file-add-menu" label="Add ..." >
+					<menupopup id="file-add-popup">
+						<menuitem label="Subtitle" oncommand="trails.createNew('title')" image="chrome://trails/content/images/titleIcon.png" class="menuitem-iconic" />
+						<menuitem label="Paragraph" oncommand="trails.createNew('text')" image="chrome://trails/content/images/textIcon.png" class="menuitem-iconic" />
+					</menupopup>
+				</menu>
+	        
+			</menupopup>
+		</menu>
+		
+		<separator class="thin" style="min-width:76px;" orient="vertical"/>
+		
+	    <menu id="publish-menu" label="PUBLISH">
+	      <menupopup id="publish-popup">
+		 		 	
+		 	<menu id="margin-settings" label="Set Margins">
+	          <menupopup id="margin-settings-popup">
+	            <menuitem label="Set trails margins" oncommand="trails.saveTrailsMargins()"></menuitem>
+	            <menuitem label="Set default margins" oncommand="trails.resetMarginsToDefault()"></menuitem>
+	          </menupopup>
+	        </menu>
+	        
+	         <menu id="export-menu" label="Export">
+	          <menupopup id="export-menu-popup">
+	            <menuitem label="To PDF" oncommand="trails.openExportToPDF();"></menuitem>
+	            <menuitem label="To trails Public Library" oncommand="trails.OpenPublish();"></menuitem>
+	          </menupopup>
+	        </menu>
+		 	
+			<menuitem label="Preview / Print booklet" oncommand="trails.OpenPreview();" image="chrome://trails/content/images/print.png" class="menuitem-iconic" />
+			
+		 	<menuseparator/>
+			
+			<menuitem label="Visit trails Public Library" oncommand="trails.OpenPublicLibrary();"/>
+			
+	        <menuseparator hidden="true"/>
+	        
+	        <!-- Hidden in release -->
+	        <menuitem label="Debug" oncommand="trails.Debug();" hidden="true" />
+	        
+	      </menupopup>
+	    </menu>
+	    
+	    <separator class="thin" style="min-width:76px;" orient="vertical"/>
+		
+	    <menu id="file-menu" label="HELP">
+	      <menupopup id="file-popup">
+	
+			<menuitem label="Help" oncommand="trails.OpenHelp();" />	 	
+			<menuitem label="Watch screencasts" oncommand="trails.OpenScreencast();" />
+			
+			<menuseparator/>
+	        <menuitem label="About" oncommand="trails.OpenAbout();" />
+	        
+	      </menupopup>
+	    </menu>
+	
+	  </menubar>
+	  
+	<!--
+	<box id="bx1" flex="1" visible="false">
+		<button label="Row Breaks" oncommand="createSpecial('rowBreak')" style="min-width: 1px; font-size:10px; max-height: 1px;" />
+		<separator class="thin" orient="vertical"/>
+		<separator class="thin" orient="vertical"/>
+		<button label="Subtitle" oncommand="createNew('title')" style="min-width: 1px; font-size:10px;" />
+		<button label="Paragraph" oncommand="createNew('text')" style="min-width: 1px; font-size:10px;" />
+		<separator class="thin" orient="vertical"/>
+		<button label="" image="images/refresh.gif" style="min-width: 1px; max-height: 1px;min-height: 1px;" oncommand="javascript:window.location.reload(true);" tooltip="refresh" />
+	</box>
+	-->
+	
+	<iframe type="content" src="preview.html" flex="50" id="browserTable" name="preview_frame" style="background-color: #FFFFFF"/>
+	<iframe type="content" src="instructions.html" flex="50" id="instructionsTable" name="instructions_frame" style="background-color: #FFFFFF; display:none;"/>
+	 
+	</toolbox>
+	
+</page>

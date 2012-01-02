@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window
+    id="publish-window"
+    title="Publish Booklet"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<script src="copyMenu.js" />
+
+<toolbox flex="1">
+
+<vbox>
+
+<hbox>
+<label value="Publish your booklet" style="font-size:32px;" />
+</hbox>
+
+<separator class="thin" style="height:30px;" orient="vertical"/>
+
+	<hbox>
+		<label value="Booklet Title" />
+	</hbox>
+	<hbox>
+		<textbox id="booklet-title" flex="1" maxlength="255"/>
+	</hbox>
+	
+	<hbox>
+		<label value="Booklet Description" />
+	</hbox>
+	<hbox>
+		<textbox id="booklet-description" flex="1" maxlength="380" multiline="true" style="height: 150px;" wrap="on" />
+	</hbox>
+	
+<separator class="thin" style="height:30px;" orient="vertical"/>	
+	
+	<hbox>
+		<label value="Your Name" />
+	</hbox>
+	<hbox>
+		<textbox id="booklet-author-name" flex="1" maxlength="255"/>
+	</hbox>
+	
+	<hbox>
+		<label value="Your City" />
+	</hbox>
+	<hbox>
+		<textbox id="booklet-author-location" flex="1" maxlength="255"/>
+	</hbox>
+	
+	<hbox>
+		<label value="Your Email (will not be published)" />
+	</hbox>
+	<hbox>
+		<textbox id="booklet-author-email" flex="1" maxlength="255"/>
+	</hbox>	
+
+<separator class="thin" style="height:16px;" orient="vertical"/>	
+
+
+	<hbox flex="1">
+		<checkbox id="termsBox" checked="false" oncommand="toggleTerms();" style="margin-top:-2px;" />
+				
+		<hbox>		
+		<label value="I've read, understood and agree to " style="margin:0px;padding:0px;" />
+		<label value="the terms" style="color:blue;text-decoration:underline;margin:0px;padding:0px;" onclick="trails.OpenTerms();" />
+		<label value=" for the Public Library." style="margin:0px;padding:0px;" />
+		</hbox>
+	</hbox>
+
+<separator class="thin" style="height:5px;" orient="vertical"/>
+
+	<hbox>
+
+		<spacer flex="1"/>
+
+<rows>
+	<row align="start">
+		<image id="spinner" src="chrome://trails/content/images/spinner.gif" align="start" width="16" height="16" style="margin-top:5px;" hidden="true" />
+	</row>
+</rows>
+
+		<button id="CancelButton" label="Cancel" oncommand="trails.CancelPublish();" />
+		<button id="PublishButton" label="Publish" oncommand="trails.sendPublishedData();" />
+	</hbox>
+</vbox>		
+
+
+</toolbox>
+
+ 
+<script>
+
+	window.document.getElementById('PublishButton').disabled = true;
+	
+	function toggleTerms() {
+	
+		var pubButton = window.document.getElementById('PublishButton');
+		var termsBox = window.document.getElementById('termsBox');
+		
+		if(termsBox.checked) { pubButton.disabled = false; } else { pubButton.disabled = true;}
+	}
+ 	    
+</script>
+
+</window>
+
+
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script src="copyMenu.js" />
+	<popup id="contentAreaContextMenu">
+	
+	
+		<menuitem id="liapus_image_search" 
+		label="Add Image to Booklet" 
+		image="chrome://trails/content/images/imageIcon.png"
+		class="menuitem-iconic"
+		accesskey="I" 
+		insertafter="context-sep-selectall" 
+		oncommand="trails.showTrails();trails.saveImage();"/>
+				
+		<menuitem label="Add Subtitle to Booklet" 
+		class="menuitem-iconic"
+		image="chrome://trails/content/images/titleIcon.png"
+		id="cls-context-copytitle" 
+		insertafter="context-sep-selectall" 
+		oncommand="trails.showTrails();trails.CreateTitle();" 
+		statustext="Add to Booklet as Subtitle" />
+		
+		<menuitem label="Add Paragraph to Booklet" 
+		image="chrome://trails/content/images/textIcon.png"
+		class="menuitem-iconic"
+		id="cls-context-copyparagraph" 
+		insertafter="context-sep-selectall" 
+		oncommand="trails.showTrails();trails.CreateParagraph();" 
+		statustext="Add to Booklet as Paragraph" />
+		
+		<menuseparator insertafter="context-sep-selectall"/>
+		
+	</popup>
+	
+	<keyset>
+		<key id="add_paragraph-key" modifiers="accel shift" key="A" oncommand="trails.showTrails();trails.CreateParagraph();" />
+	</keyset>
+</overlay>
